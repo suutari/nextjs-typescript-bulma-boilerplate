@@ -1,23 +1,43 @@
-import Layout from "../components/layout";
+import Head from "next/head";
+import Link from "next/link";
+import {Columns, Container, Heading, Section} from "react-bulma-components";
 import Counter from "../components/counter";
 
 const Index = () => (
-  <Layout home>
-    <section className="section">
-      <div className="container">
-        <h1 className="title">
-          Hello World from <a href="https://nextjs.org/">Next.js</a> and{" "}
-          <a href="https://bulma.io/">Bulma</a>!
-        </h1>
-      </div>
-    </section>
-
-    <section className="section">
-      <div className="container">
-        <Counter></Counter>
-      </div>
-    </section>
-  </Layout>
+  <>
+    <Head>
+      <title>Front Page</title>
+    </Head>
+    <Section>
+      <Container>
+        <Heading>
+          Hello World from <Link href="https://nextjs.org/">Next.js</Link> and{" "}
+          <Link href="https://bulma.io/">Bulma</Link>!
+        </Heading>
+      </Container>
+    </Section>
+    <Section>
+      <Container>
+        <Columns>
+          <Columns.Column>
+            <Counter />
+          </Columns.Column>
+          <Columns.Column>
+            <Counter />
+          </Columns.Column>
+          <Columns.Column>
+            <Counter />
+          </Columns.Column>
+          <Columns.Column>
+            <Counter />
+          </Columns.Column>
+          <Columns.Column>
+            <Counter />
+          </Columns.Column>
+        </Columns>
+      </Container>
+    </Section>
+  </>
 );
 
 export default Index;

@@ -1,12 +1,16 @@
-import Layout from "../components/layout";
+import Head from "next/head";
+import {Container, Heading, Section} from "react-bulma-components";
 
 const SecondPage = () => (
-  <Layout>
-    <section className="section">
-      <div className="container">
-        <h1 className="title">Second page</h1>
-      </div>
-    </section>
-  </Layout>
+  <>
+    <Head>
+      <title>Second Page</title>
+    </Head>
+    <Section>
+      <Container>
+        <Heading>Second page</Heading>
+      </Container>
+    </Section>
+  </>
 );
 export default SecondPage;
